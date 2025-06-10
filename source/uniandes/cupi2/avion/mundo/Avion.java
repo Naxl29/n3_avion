@@ -1,6 +1,6 @@
 /**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- * Universidad de los Andes (Bogotá - Colombia)
- * Departamento de Ingeniería de Sistemas y Computación 
+ * Universidad de los Andes (Bogotï¿½ - Colombia)
+ * Departamento de Ingenierï¿½a de Sistemas y Computaciï¿½n 
  * Licenciado bajo el esquema Academic Free License version 2.1 
  *
  * Proyecto Cupi2 (http://cupi2.uniandes.edu.co)
@@ -14,7 +14,7 @@ import uniandes.cupi2.avion.mundo.Silla.Clase;
 import uniandes.cupi2.avion.mundo.Silla.Ubicacion;
 
 /**
- * Avión de pasajeros.
+ * Aviï¿½n de pasajeros.
  */
 public class Avion
 {
@@ -23,12 +23,12 @@ public class Avion
     // -----------------------------------------------------------------
 
     /**
-     * Número de sillas ejecutivas.
+     * Nï¿½mero de sillas ejecutivas.
      */
     public final static int SILLAS_EJECUTIVAS = 8;
 
     /**
-     * Número de sillas económicas.
+     * Nï¿½mero de sillas econï¿½micas.
      */
     public final static int SILLAS_ECONOMICAS = 42;
 
@@ -37,13 +37,13 @@ public class Avion
     // -----------------------------------------------------------------
 
     /**
-     * Sillas de la clase ejecutiva del avión.
+     * Sillas de la clase ejecutiva del aviï¿½n.
      */
 
     private Silla[] sillasEjecutivas;
 
     /**
-     * Sillas de la clase económica del avión.
+     * Sillas de la clase econï¿½mica del aviï¿½n.
      */
     private Silla[] sillasEconomicas;
 
@@ -52,8 +52,8 @@ public class Avion
     // -----------------------------------------------------------------
 
     /**
-     * Construye el avión. <br>
-     * <b>post: </b> Se inicializan las listas de sillas ejecutivas y económicas.
+     * Construye el aviï¿½n. <br>
+     * <b>post: </b> Se inicializan las listas de sillas ejecutivas y econï¿½micas.
      */
     public Avion( )
     {
@@ -62,7 +62,7 @@ public class Avion
         // Crea las sillas ejecutivas
         sillasEjecutivas = new Silla[SILLAS_EJECUTIVAS];
 
-        // Crea las sillas económicas
+        // Crea las sillas econï¿½micas
         sillasEconomicas = new Silla[SILLAS_ECONOMICAS];
 
         sillasEjecutivas[ 0 ] = new Silla( 1, Clase.EJECUTIVA, Ubicacion.VENTANA );
@@ -91,17 +91,17 @@ public class Avion
     }
 
     // -----------------------------------------------------------------
-    // Métodos
+    // Mï¿½todos
     // -----------------------------------------------------------------
 
     /**
-     * Asigna la silla al pasajero en la clase y ubicación especificados. <br>
-     * <b>post: </b> Si existe una silla con la clase y la ubicación dada, el pasajero queda asignado en la primera de ellas según el orden numérico.
+     * Asigna la silla al pasajero en la clase y ubicaciï¿½n especificados. <br>
+     * <b>post: </b> Si existe una silla con la clase y la ubicaciï¿½n dada, el pasajero queda asignado en la primera de ellas segï¿½n el orden numï¿½rico.
      * @param pClase Clase elegida por el pasajero. Clase pertenece {Clase.EJECUTIVA, Clase.ECONOMICA}.
-     * @param pUbicacion Ubicación elegida por el pasajero. Si clase = Clase.ECONOMICA entonces ubicación pertenece {VENTANA, CENTRAL, PASILLO}, <br>
-     *        o si clase = Clase.EJECUTIVA entonces ubicación pertenece {VENTANA, PASILLO}.
-     * @param pPasajero Pasajero a asignar. pPasajero != null y no tiene silla en el avión.
-     * @return Silla asignada al pasajero o null si no se pudo asignar una silla al pasajero en la ubicación y clase especificados.
+     * @param pUbicacion Ubicaciï¿½n elegida por el pasajero. Si clase = Clase.ECONOMICA entonces ubicaciï¿½n pertenece {VENTANA, CENTRAL, PASILLO}, <br>
+     *        o si clase = Clase.EJECUTIVA entonces ubicaciï¿½n pertenece {VENTANA, PASILLO}.
+     * @param pPasajero Pasajero a asignar. pPasajero != null y no tiene silla en el aviï¿½n.
+     * @return Silla asignada al pasajero o null si no se pudo asignar una silla al pasajero en la ubicaciï¿½n y clase especificados.
      */
     public Silla asignarSilla( Clase pClase, Ubicacion pUbicacion, Pasajero pPasajero )
     {
@@ -123,9 +123,9 @@ public class Avion
     }
 
     /**
-     * Busca la siguiente silla ejecutiva que este libre y tenga la ubicación indicada. <br>
-     * <b>pre: </b> La lista de sillas ejecutivas está inicializada.
-     * @param pUbicacion Ubicación en donde buscar la silla. pUbicación pertenece {VENTANA, PASILLO}.
+     * Busca la siguiente silla ejecutiva que este libre y tenga la ubicaciï¿½n indicada. <br>
+     * <b>pre: </b> La lista de sillas ejecutivas estï¿½ inicializada.
+     * @param pUbicacion Ubicaciï¿½n en donde buscar la silla. pUbicaciï¿½n pertenece {VENTANA, PASILLO}.
      * @return La silla libre encontrada. Si no encuentra una silla retorna null.
      */
     public Silla buscarSillaEjecutivaLibre( Ubicacion pUbicacion )
@@ -148,9 +148,9 @@ public class Avion
     }
 
     /**
-     * Busca la siguiente silla económica que este libre y tenga la ubicación indicada. <br>
-     * <b>pre: </b> La lista de sillas económicas está inicializada.
-     * @param pUbicacion Ubicación en donde buscar la silla. pUbicación pertenece {VENTANA, CENTRAL, PASILLO}.
+     * Busca la siguiente silla econï¿½mica que este libre y tenga la ubicaciï¿½n indicada. <br>
+     * <b>pre: </b> La lista de sillas econï¿½micas estï¿½ inicializada.
+     * @param pUbicacion Ubicaciï¿½n en donde buscar la silla. pUbicaciï¿½n pertenece {VENTANA, CENTRAL, PASILLO}.
      * @return Silla libre encontrada. Si no encuentra una silla retorna null.
      */
     public Silla buscarSillaEconomicaLibre( Ubicacion pUbicacion )
@@ -173,9 +173,9 @@ public class Avion
     }
 
     /**
-     * Busca un pasajero en el avión.
+     * Busca un pasajero en el aviï¿½n.
      * @param pPasajero Pasajero a buscar. pPasajero != null.
-     * @return Silla en la que se encontró el pasajero. Si no lo encuentra retorna null.
+     * @return Silla en la que se encontrï¿½ el pasajero. Si no lo encuentra retorna null.
      */
     public Silla buscarPasajero( Pasajero pPasajero )
     {
@@ -184,7 +184,7 @@ public class Avion
         // Si no estaba en ejecutiva
         if( null == silla )
         {
-            // Busca en económica
+            // Busca en econï¿½mica
             silla = buscarPasajeroEconomico( pPasajero );
         }
 
@@ -194,9 +194,9 @@ public class Avion
 
     /**
      * Busca un pasajero en las sillas ejecutivas. <br>
-     * <b>pre: </b> La lista de sillas ejecutivas está inicializada.
+     * <b>pre: </b> La lista de sillas ejecutivas estï¿½ inicializada.
      * @param pPasajero Pasajero a buscar. pPasajero != null.
-     * @return Silla en la que se encontró el pasajero. Si no lo encuentra retorna null.
+     * @return Silla en la que se encontrï¿½ el pasajero. Si no lo encuentra retorna null.
      */
     public Silla buscarPasajeroEjecutivo( Pasajero pPasajero )
     {
@@ -218,10 +218,10 @@ public class Avion
     }
 
     /**
-     * Busca un pasajero en las sillas económicas. <br>
-     * <b>pre: </b> La lista de sillas económicas está inicializada.
+     * Busca un pasajero en las sillas econï¿½micas. <br>
+     * <b>pre: </b> La lista de sillas econï¿½micas estï¿½ inicializada.
      * @param pPasajero Pasajero a buscar. pPasajero != null.
-     * @return Silla en la que se encontró el pasajero. Si no lo encuentra retorna null.
+     * @return Silla en la que se encontrï¿½ el pasajero. Si no lo encuentra retorna null.
      */
     public Silla buscarPasajeroEconomico( Pasajero pPasajero )
     {
@@ -246,11 +246,11 @@ public class Avion
      * Desasigna la silla de un pasajero. <br>
      * <b>post: </b> Si se encuentra una silla con el pasajero, la silla quedara con su pasajero igual a null.
      * @param pPasajero Pasajero a retirar. pPasajero != null.
-     * @return Retorna true si encontró el pasajero y des asignó la silla, false en caso contrario.
+     * @return Retorna true si encontrï¿½ el pasajero y des asignï¿½ la silla, false en caso contrario.
      */
     public boolean desasignarSilla( Pasajero pPasajero )
     {
-        // Busca el pasajero en el avión
+        // Busca el pasajero en el aviï¿½n
         Silla silla = buscarPasajero( pPasajero );
         boolean resultado = false;
         // Si lo encuentra desasigna
@@ -263,9 +263,9 @@ public class Avion
     }
 
     /**
-     * Retorna el número de sillas ejecutivas ocupadas. <br>
-     * <b>pre: </b> La lista de sillas ejecutivas está inicializada.
-     * @return Número de silla ejecutivas ocupadas.
+     * Retorna el nï¿½mero de sillas ejecutivas ocupadas. <br>
+     * <b>pre: </b> La lista de sillas ejecutivas estï¿½ inicializada.
+     * @return Nï¿½mero de silla ejecutivas ocupadas.
      */
     public int contarSillasEjecutivasOcupadas( )
     {
@@ -281,9 +281,9 @@ public class Avion
     }
 
     /**
-     * Retorna el número de sillas económicas ocupadas. <br>
-     * <b>pre: </b> La lista de sillas económicas está inicializada.
-     * @return Número de sillas económicas ocupadas.
+     * Retorna el nï¿½mero de sillas econï¿½micas ocupadas. <br>
+     * <b>pre: </b> La lista de sillas econï¿½micas estï¿½ inicializada.
+     * @return Nï¿½mero de sillas econï¿½micas ocupadas.
      */
     public int contarSillasEconomicasOcupadas( )
     {
@@ -299,8 +299,8 @@ public class Avion
     }
 
     /**
-     * Calcula el porcentaje de ocupación del avión.
-     * @return Porcentaje total de ocupación.
+     * Calcula el porcentaje de ocupaciï¿½n del aviï¿½n.
+     * @return Porcentaje total de ocupaciï¿½n.
      */
     public double calcularPorcentajeOcupacion( )
     {
@@ -312,8 +312,50 @@ public class Avion
     }
 
     /**
-     * Retorna las sillas ejecutivas del avión.
-     * @return Sillas ejecutivas del avión.
+     * @return La clase con mÃ¡s sillas ocupadas.
+     */
+    public Clase darClaseConMasSillasEnVentanaOcupadas(){
+        int ejecutivasVentanaOcupadas = 0;
+        int economicasVentanaOcupadas = 0;
+
+        for (Silla silla : sillasEjecutivas) {
+            if (silla.sillaAsignada() && silla.darUbicacion() == Ubicacion.VENTANA) {
+                ejecutivasVentanaOcupadas++;
+            }
+        }
+
+        for (Silla silla : sillasEconomicas) {
+            if (silla.sillaAsignada() && silla.darUbicacion() == Ubicacion.VENTANA) {
+                economicasVentanaOcupadas++;
+            }
+        }
+
+        if (ejecutivasVentanaOcupadas > economicasVentanaOcupadas) {
+            return Clase.EJECUTIVA;
+        } else if (economicasVentanaOcupadas > ejecutivasVentanaOcupadas) {
+            return Clase.ECONOMICA;
+        } else {
+            return null; 
+        }
+    }
+
+
+    /**
+     * 
+     * @return Primera silla economica libre en ventana
+     */
+    public Silla darSillaEconomicaLibreEnVentana(){
+        for (Silla silla : sillasEconomicas) {
+            if (!silla.sillaAsignada() && silla.darUbicacion() == Ubicacion.VENTANA) {
+                return silla;
+            }
+        }
+        return null;
+    }
+
+    /**
+     * Retorna las sillas ejecutivas del aviï¿½n.
+     * @return Sillas ejecutivas del aviï¿½n.
      */
     public Silla[] obtenerSillasEjecutivas( )
     {
@@ -321,8 +363,8 @@ public class Avion
     }
 
     /**
-     * Retorna las sillas económicas del avión.
-     * @return Sillas económicas del avión.
+     * Retorna las sillas econï¿½micas del aviï¿½n.
+     * @return Sillas econï¿½micas del aviï¿½n.
      */
     public Silla[] obtenerSillasEconomicas( )
     {
@@ -330,21 +372,37 @@ public class Avion
     }
 
     /**
-     * Método para la extensión 1.
+     * Mï¿½todo para la extensiï¿½n 1.
      * @return Respuesta 1.
      */
     public String metodo1( )
     {
-        return "Respuesta 1";
+        Clase claseConMas = darClaseConMasSillasEnVentanaOcupadas();
+        if(claseConMas == Clase.EJECUTIVA) {
+            return "Hay mÃ¡s sillas ocupadas ubicadas en la ventana en la clase ejecutiva.";
+        }
+        else if(claseConMas == Clase.ECONOMICA) {
+            return "Hay mÃ¡s sillas ocupadas ubicadas en la ventana en la clase econÃ³mica.";
+        }
+        else {
+            return "Hay un nÃºmero igual de sillas ocupadas en la ventana.";
+        }
     }
 
     /**
-     * Método para la extensión 2.
+     * Mï¿½todo para la extensiï¿½n 2.
      * @return Respuesta 2.
      */
     public String metodo2( )
     {
-        return "Respuesta 2";
+        Silla sillaLibre = darSillaEconomicaLibreEnVentana();
+        
+        if(sillaLibre != null) {
+            return "Hay una silla econÃ³mica gratuita en la ventana. El nÃºmero de la silla es " + sillaLibre.darNumero() + ".";
+        }
+        else {
+            return "No hay silla econÃ³mica libre en la ventana.";
+        }
     }
 
 }
